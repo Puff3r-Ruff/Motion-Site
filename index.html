@@ -24,14 +24,97 @@
    
 
     <!-- Template Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    <link href="style.1774458200029.css" rel="stylesheet">
     
 
 
 
-<link rel="stylesheet" href="chrome-extension://6ac6d77e-4e09-4e19-952e-61ced6d98c7d/app/content-style.css">
+<link rel="stylesheet" href="chrome-extension://6ac6d77e-4e09-4e19-952e-61ced6d98c7d/app/content-style.css"><script id="RequiredScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script id="RequiredScript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script id="RequiredScript">
+    function initUI($) {
+    "use strict";
 
-</head><body id="Sav">
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+    spinner();
+
+    new WOW().init();
+
+    $('[data-toggle="counter-up"]').counterUp({
+        delay: 10,
+        time: 2000
+    });
+
+    $(".header-carousel").owlCarousel({
+        items: 1,
+        dots: true,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ]
+    });
+
+    $(".testimonial-carousel").owlCarousel({
+        center: true,
+        margin: 24,
+        dots: true,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+            ],
+        responsive: {
+            0:{ items:1 },
+            768:{ items:2 },
+            992:{ items:3 }
+        }
+    });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+}
+
+// Call it:
+initUI(jQuery);
+        
+function destroyOwlControls() {
+  const dots = document.querySelector('.owl-dots');
+  const nav = document.querySelector('.owl-nav');
+
+  if (dots) {
+    dots.remove();
+  }
+
+  if (nav) {
+    nav.remove();
+  }
+}
+
+    </script></head><body id="Sav">
     <!-- Spinner Start -->
     <div id="spinner" class="bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -45,7 +128,7 @@
     <div class="container-fluid bg-light sticky-top p-0">
         <nav class="navbar navbar-expand-lg navbar-light p-0">
             <a class="navbar-brand bg-primary py-4 px-5 me-0">
-                <h1 class="mb-0" style="cursor: text;"><i class="bi bi-scissors"></i>TABLE</h1>
+                <h1 class="mb-0" style="cursor: text;"><i class="bi bi-scissors"></i>Table</h1>
             </a>
             <!-- <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
@@ -66,8 +149,8 @@
             <div class="row g-0 align-items-center">
                 <div class="col-lg-6 hero-header-text py-5">
                     <div class="py-5 px-3 ps-lg-0">
-                        <h1 class="font-dancing-script text-primary animated slideInLeft" style="cursor: text;">TAB</h1>
-                        <h1 class="display-1 mb-4 animated slideInLeft" style="cursor: text;">TAbles</h1>
+                        <h1 class="font-dancing-script text-primary animated slideInLeft" style="cursor: text;">Add Text Here</h1>
+                        <h1 class="display-1 mb-4 animated slideInLeft" style="cursor: text;">TABLES</h1>
                         <div class="row g-4 animated slideInLeft">
                             <div class="col-md-6">
                                 <div class="d-flex align-items-center">
@@ -99,7 +182,7 @@
                         
                         
                         
-                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-3794px, 0px, 0px); transition: 0.25s; width: 6640px;"><div class="owl-item cloned" style="width: 948.5px;"><img class="img-fluid" src="images/img_0.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item cloned" style="width: 948.5px;"><img class="img-fluid" src="images/img_1.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item" style="width: 948.5px;"><img class="img-fluid" src="images/img_2.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item" style="width: 948.5px;"><img class="img-fluid" src="images/img_3.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item active" style="width: 948.5px;"><img class="img-fluid" src="images/img_4.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item cloned" style="width: 948.5px;"><img class="img-fluid" src="images/img_5.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item cloned" style="width: 948.5px;"><img class="img-fluid" src="images/img_6.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div></div></div></div>
+                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1897px, 0px, 0px); transition: all; width: 6640px;"><div class="owl-item cloned" style="width: 948.5px;"><img class="img-fluid" src="images/img_0.1774458200029.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item cloned" style="width: 948.5px;"><img class="img-fluid" src="images/img_1.1774458200029.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item active" style="width: 948.5px;"><img class="img-fluid" src="images/img_2.1774458200029.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item" style="width: 948.5px;"><img class="img-fluid" src="images/img_3.1774458200029.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item" style="width: 948.5px;"><img class="img-fluid" src="images/img_4.1774458200029.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item cloned" style="width: 948.5px;"><img class="img-fluid" src="images/img_5.1774458200029.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div><div class="owl-item cloned" style="width: 948.5px;"><img class="img-fluid" src="images/img_6.1774458200029.jpg" alt="Salon Hairdresser" style="cursor: pointer;"></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="bi bi-chevron-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="bi bi-chevron-right"></i></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span class="" style="cursor: text;"></span></button><button role="button" class="owl-dot"><span class="" style="cursor: text;"></span></button><button role="button" class="owl-dot"><span class="" style="cursor: text;"></span></button></div></div>
                 </div>
             </div>
         </div>
@@ -111,8 +194,8 @@
     <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s;">
-                    <img class="img-fluid mb-3" src="images/img_7.jpg" alt="Salon Hairdresser" style="cursor: pointer;">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+                    <img class="img-fluid mb-3" src="images/img_7.1774458200029.jpg" alt="Salon Hairdresser" style="cursor: pointer;">
                     <div class="d-flex align-items-center bg-light">
                         <div class="btn-square flex-shrink-0 bg-primary" style="width: 100px; height: 100px;">
                             <i class="fa fa-phone fa-2x text-dark"></i>
@@ -123,7 +206,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeIn animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s;">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
                     <h1 class="font-dancing-script text-primary" style="cursor: text;">Add Text Here</h1>
                     <h1 class="mb-5" style="cursor: text;">Add Text Here!</h1>
                     <p class="mb-4" style="cursor: text;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget libero
@@ -156,14 +239,14 @@
     <!-- Service Start -->
     <div class="container-fluid service py-5">
         <div class="container">
-            <div class="text-center wow fadeIn animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s;">
+            <div class="text-center wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
                 <h1 class="font-dancing-script text-primary" style="cursor: text;">Add Text Here</h1>
                 <h1 class="mb-5" style="cursor: text;">Add Text Here</h1>
             </div>
             <div class="row g-4 g-md-0 text-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="service-item h-100 p-4 border-bottom border-end wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
-                        <img class="img-fluid" src="images/img_8.jpg" alt="" style="cursor: pointer;">
+                        <img class="img-fluid" src="images/img_8.1774458200029.jpg" alt="" style="cursor: pointer;">
                         <h3 class="mb-3" style="cursor: text;">Add Text Here</h3>
                         <p class="mb-3" style="cursor: text;">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
                             et tempor eirmod magna dolore erat amet</p>
@@ -172,7 +255,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="service-item h-100 p-4 border-bottom border-lg-end wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
-                        <img class="img-fluid" src="images/img_9.jpg" alt="" style="cursor: pointer;">
+                        <img class="img-fluid" src="images/img_9.1774458200029.jpg" alt="" style="cursor: pointer;">
                         <h3 class="mb-3" style="cursor: text;">Add Text Here</h3>
                         <p class="mb-3" style="cursor: text;">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
                             et tempor eirmod magna dolore erat amet</p>
@@ -182,7 +265,7 @@
                 <!-- The rest of the service items are kept exactly as in your document -->
                 <div class="col-md-6 col-lg-4">
                     <div class="service-item h-100 p-4 border-bottom border-lg-bottom-0 border-lg-end wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
-                        <img class="img-fluid" src="images/img_10.jpg" alt="" style="cursor: pointer;">
+                        <img class="img-fluid" src="images/img_10.1774458200029.jpg" alt="" style="cursor: pointer;">
                         <h3 class="mb-3" style="cursor: text;">Add Text Here</h3>
                         <p class="mb-3" style="cursor: text;">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
                             et tempor eirmod magna dolore erat amet</p>
@@ -191,7 +274,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="service-item h-100 p-4 border-end wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
-                        <img class="img-fluid" src="images/img_11.jpg" alt="" style="cursor: pointer;">
+                        <img class="img-fluid" src="images/img_11.1774458200029.jpg" alt="" style="cursor: pointer;">
                         <h3 class="mb-3" style="cursor: text;">Add Text Here</h3>
                         <p class="mb-3" style="cursor: text;">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
                             et tempor eirmod magna dolore erat amet</p>
@@ -200,7 +283,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="service-item h-100 p-4 wow fadeIn" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                        <img class="img-fluid" src="images/img_12.jpg" alt="" style="cursor: pointer;">
+                        <img class="img-fluid" src="images/img_12.1774458200029.jpg" alt="" style="cursor: pointer;">
                         <h3 class="mb-3" style="cursor: text;">Add Text Here</h3>
                         <p class="mb-3" style="cursor: text;">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
                             et tempor eirmod magna dolore erat amet</p>
@@ -223,7 +306,7 @@
             <div class="row g-4 team">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
                     <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="images/img_13.jpg" alt="" style="cursor: pointer;">
+                        <img class="img-fluid w-100" src="images/img_13.1774458200029.jpg" alt="" style="cursor: pointer;">
                         <div class="team-overlay">
                             <p class="text-primary mb-1" style="cursor: text;">Add Text Here</p>
                             <h4 class="" style="cursor: text;">Add Text Here</h4>
@@ -236,7 +319,7 @@
                 <!-- The rest of team members are unchanged -->
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
                     <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="images/img_14.jpg" alt="" style="cursor: pointer;">
+                        <img class="img-fluid w-100" src="images/img_14.1774458200029.jpg" alt="" style="cursor: pointer;">
                         <div class="team-overlay">
                             <p class="text-primary mb-1" style="cursor: text;">Add Text Here</p>
                             <h4 class="" style="cursor: text;">Add Text Here</h4>
@@ -248,7 +331,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
                     <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="images/img_15.jpg" alt="" style="cursor: pointer;">
+                        <img class="img-fluid w-100" src="images/img_15.1774458200029.jpg" alt="" style="cursor: pointer;">
                         <div class="team-overlay">
                             <p class="text-primary mb-1" style="cursor: text;">Add Text Here</p>
                             <h4 class="" style="cursor: text;">Add Text Here</h4>
@@ -260,7 +343,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
                     <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="images/img_16.jpg" alt="" style="cursor: pointer;">
+                        <img class="img-fluid w-100" src="images/img_16.1774458200029.jpg" alt="" style="cursor: pointer;">
                         <div class="team-overlay">
                             <p class="text-primary mb-1" style="cursor: text;">Add Text Here</p>
                             <h4 class="" style="cursor: text;">Add Text Here</h4>
@@ -408,90 +491,24 @@
 
     
    
-<script id="RequiredScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script id="RequiredScript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script id="RequiredScript">
-    function initUI($) {
-    "use strict";
 
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
+    
 
-    new WOW().init();
 
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
-    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-    $(".header-carousel").owlCarousel({
-        items: 1,
-        dots: true,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ]
-    });
+    <!-- Inline JavaScript – this replaces js/main.js -->
+    
+    
 
-    $(".testimonial-carousel").owlCarousel({
-        center: true,
-        margin: 24,
-        dots: true,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-            ],
-        responsive: {
-            0:{ items:1 },
-            768:{ items:2 },
-            992:{ items:3 }
-        }
-    });
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
 
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-}
-
-// Call it:
-initUI(jQuery);
-        
-function destroyOwlControls() {
-  const dots = document.querySelector('.owl-dots');
-  const nav = document.querySelector('.owl-nav');
-
-  if (dots) {
-    dots.remove();
-  }
-
-  if (nav) {
-    nav.remove();
-  }
-}
-
-    </script>
 </div></body></html>
