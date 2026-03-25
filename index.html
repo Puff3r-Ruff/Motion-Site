@@ -29,92 +29,9 @@
 
 
 
-<link rel="stylesheet" href="chrome-extension://6ac6d77e-4e09-4e19-952e-61ced6d98c7d/app/content-style.css"><script id="RequiredScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script id="RequiredScript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script id="RequiredScript">
-    function initUI($) {
-    "use strict";
+<link rel="stylesheet" href="chrome-extension://6ac6d77e-4e09-4e19-952e-61ced6d98c7d/app/content-style.css">
 
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
-
-    new WOW().init();
-
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
-    });
-
-    $(".header-carousel").owlCarousel({
-        items: 1,
-        dots: true,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ]
-    });
-
-    $(".testimonial-carousel").owlCarousel({
-        center: true,
-        margin: 24,
-        dots: true,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-            ],
-        responsive: {
-            0:{ items:1 },
-            768:{ items:2 },
-            992:{ items:3 }
-        }
-    });
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-}
-
-// Call it:
-initUI(jQuery);
-        
-function destroyOwlControls() {
-  const dots = document.querySelector('.owl-dots');
-  const nav = document.querySelector('.owl-nav');
-
-  if (dots) {
-    dots.remove();
-  }
-
-  if (nav) {
-    nav.remove();
-  }
-}
-
-    </script></head><body id="Sav">
+</head><body id="Sav">
     <!-- Spinner Start -->
     <div id="spinner" class="bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -491,24 +408,90 @@ function destroyOwlControls() {
 
     
    
+<script id="RequiredScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script id="RequiredScript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<script id="RequiredScript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script id="RequiredScript">
+    function initUI($) {
+    "use strict";
 
-    
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+    spinner();
 
+    new WOW().init();
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    $('[data-toggle="counter-up"]').counterUp({
+        delay: 10,
+        time: 2000
+    });
 
-    <!-- Inline JavaScript – this replaces js/main.js -->
-    
-    
+    $(".header-carousel").owlCarousel({
+        items: 1,
+        dots: true,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ]
+    });
 
+    $(".testimonial-carousel").owlCarousel({
+        center: true,
+        margin: 24,
+        dots: true,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+            ],
+        responsive: {
+            0:{ items:1 },
+            768:{ items:2 },
+            992:{ items:3 }
+        }
+    });
 
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
 
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+}
+
+// Call it:
+initUI(jQuery);
+        
+function destroyOwlControls() {
+  const dots = document.querySelector('.owl-dots');
+  const nav = document.querySelector('.owl-nav');
+
+  if (dots) {
+    dots.remove();
+  }
+
+  if (nav) {
+    nav.remove();
+  }
+}
+
+    </script>
 </div></body></html>
