@@ -36,7 +36,7 @@ async function loadProducts() {
      2) NORMAL MODE → TRY LOADING products.json
   --------------------------------------------------- */
   try {
-    const res = await fetch("/Products/products.json");
+    const res = await fetch("Products/products.json");
 
     // JSON missing → hide wrapper
     if (!res.ok) {
