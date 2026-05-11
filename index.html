@@ -6,14 +6,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Make preview mode globally accessible
-  const urlParams = new URLSearchParams(window.location.search);
-  window.previewMode = urlParams.get("preview") === "true";
 
-  loadProducts();
-});
+function initTemplateNavSlider() {
+  let templateNavIndex = 0;
+  const templateNavCards = document.querySelectorAll(".template-card");
+  const templateNavPrev = document.querySelector(".templateNav-left");
+  const templateNavNext = document.querySelector(".templateNav-right");
 
+  if (!templateNavCards.length) return;
+
+  function templateNavShowCard(i) {
+    templateNavCards.forEach(c => c.classList.remove("active"));
+    templateNavCards[i].classList.add("active");
+  }
+
+  if (templateNavPrev && templateNavNext) {
+    templateNavNext.onclick = () => {
+      templateNavIndex = (templateNavIndex + 1) % templateNavCards.length;
+      templateNavShowCard(templateNavIndex);
+    };
+
+    templateNavPrev.onclick = () => {
+      templateNavIndex = (templateNavIndex - 1 + templateNavCards.length) % templateNavCards.length;
+      templateNavShowCard(templateNavIndex);
+    };
+
+    setInterval(() => {
+      templateNavIndex = (templateNavIndex + 1) % templateNavCards.length;
+      templateNavShowCard(templateNavIndex);
+    }, 3000);
+  }
+}
+    
 async function loadProducts() {
   const wrapper = document.querySelector(".templateNav-wrapper");
   const list = document.querySelector(".template-list");
@@ -80,6 +104,13 @@ async function loadProducts() {
     wrapper.style.display = "none";
   }
 }
+    document.addEventListener("DOMContentLoaded", () => {
+  // Make preview mode globally accessible
+  const urlParams = new URLSearchParams(window.location.search);
+  window.previewMode = urlParams.get("preview") === "true";
+
+  loadProducts();
+});
 </script>
     
 <style>
