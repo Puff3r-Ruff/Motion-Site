@@ -192,7 +192,7 @@ function createShadowEditorUI() {
 
         <div id="contentArea">
           <button class="btn btn-back" id="backToTemplates">
-            <a href="/BusinessHud" style="color:inherit;text-decoration:none;">Back to Templates</a>
+            <a href="/BusinessHud" style="color:inherit;text-decoration:none;display:block;">Business Hud</a>
           </button>
 
           <input id="SiteName" placeholder="Site name" />
