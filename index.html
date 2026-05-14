@@ -83,7 +83,7 @@ async function loadProducts() {
 
     // JSON exists → show wrapper + show nav
     wrapper.style.display = "block";
-    showStoreNav();
+
 
     const data = await res.json();
     const products = data.products ?? [];
@@ -116,7 +116,6 @@ async function loadProducts() {
   } catch (err) {
     console.error("Error loading products:", err);
     wrapper.style.display = "none";
-    hideStoreNav();
   }
 }
 
